@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<h2 class="blog_title">
+	<a class="blog_title" href="/">NanoForce</a>
+	<h2>
 
-<div class="post">
-	{{ content }}
-</div>
+		<h1 class="post_title">{{ page.title }}</h1>
+		<p class="meta">{{ page.date | date_to_string }}</p>
+
+		<div class="post">
+			{{ content }}
+		</div>

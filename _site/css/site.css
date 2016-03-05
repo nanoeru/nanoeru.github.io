@@ -1,7 +1,51 @@
 body {
 	font-family: Sans;
+
+	background-color: #eeeeee;
+	padding: 1em;
 }
 
+/*h1 {*/
+/*color: darkgreen;*/
+/*color: darkblue;*/
+/*}*/
+
+/* blog title */
+.blog_title {
+	color: #FFF;
+	font-size: 32px;
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #000,
+	-2px 2px 1px #000,
+	2px -2px 1px #000,
+	-2px -2px 1px #000;
+
+	/*文字間隔*/
+	letter-spacing: 0.5em;
+	line-height:0px;
+
+	/*リンク下線なし*/
+	text-decoration: none;
+}
+
+/*post title*/
+.post_title {
+	color: #FFF;
+	font-size: 50px;
+	/*font-weight: bold;*/
+	text-shadow: 2px 2px 1px #000,
+	-2px 2px 1px #000,
+	2px -2px 1px #000,
+	-2px -2px 1px #000;
+}
+
+/*#見出し*/
 h1 {
-	color: darkgreen;
+	color: #FFF;
+	/*font-size: 50px;*/
+	/*font-weight: bold;*/
+	text-shadow: 2px 2px 1px #000,
+	-2px 2px 1px #000,
+	2px -2px 1px #000,
+	-2px -2px 1px #000;
 }

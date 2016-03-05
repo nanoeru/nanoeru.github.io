@@ -6,9 +6,30 @@
 		<link rel="stylesheet" href="/css/code_syntax_highlight_base.css" media="all">
 		<link rel="stylesheet" href="/css/code_syntax_highlight.css" media="all">
 		<title>Jedie is Awesome!</title>
+		<script>
+			/* jedie build と jedie serveで生成されるcodeに差異があるため、<pre><code>を囲む<div>の追加及びclassの追加を行う*/
+			window.onload = function(){
+				var hostname = window.location.hostname ;
+				if (hostname == 'localhost') {
+					var pre_doms = document.getElementsByTagName('pre');
+					for (var i = 0; i < pre_doms.length; i++) { 
+						var pre_dom = pre_doms[i];
+						pre_dom.classList.add('highlight');
+
+						var div = document.createElement('div');
+						div.classList.add('highlighter-rouge');
+
+						pre_dom.parentNode.insertBefore(div, pre_dom); 
+						div.appendChild(pre_dom);
+					}
+				}
+			}
+</script>
 	</head>
 	<body>
-		<h2>Welcome to Jedie!</h2>
+		<a class="blog_title" href="/">NanoForce</a>
+
+<h1 class="post_title">Welcome to Jedie!</h1>
 <p class="meta">2016/03/05 00:00:00</p>
 
 <div class="post">

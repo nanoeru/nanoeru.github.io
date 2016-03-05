@@ -5,25 +5,16 @@
     <link></link>
     <atom:link rel="self" type="application/rss+xml" href="" />
     <description></description>
-    <pubDate>Sat, 05 Mar 2016 18:18:21 +0900</pubDate>
-    <lastBuildDate>Sat, 05 Mar 2016 18:18:21 +0900</lastBuildDate>
+    <pubDate>Sat, 05 Mar 2016 19:30:39 +0900</pubDate>
+    <lastBuildDate>Sat, 05 Mar 2016 19:30:39 +0900</lastBuildDate>
     
     <item>
-      <title>Welcome to Jedie!</title>
-      <link>/2016/03/06/sample.html</link>
-      <guid isPermaLink="false">tag:vim-jp.org,2016/00/06:/2016/03/06/sample.html,rev:1</guid>
-      <pubDate>Sun, 06 Mar 2016 00:00:00 +0900</pubDate>
-      <author>vim-jp</author>
-      <description>&#xA;# sample page&#xA;&#xA;```&#xA;    package main&#xA;    &#xA;    import &#34;fmt&#34;&#xA;    &#xA;    func main() {&#xA;&#x9;    fmt.Println(&#34;こんにちわ世界&#34;)&#xA;    }&#xA;```&#xA;&#xA;Check out the [Jedie][jedie-gh] for more info.&#xA;&#xA;[jedie-gh]: https://github.com/mattn/jedie&#xA;</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Jedie!</title>
-      <link>/2016/03/05/welcome-to-jedie.html</link>
-      <guid isPermaLink="false">tag:vim-jp.org,2016/00/05:/2016/03/05/welcome-to-jedie.html,rev:1</guid>
+      <title>Blog memo</title>
+      <link>/2016/03/05/sample.html</link>
+      <guid isPermaLink="false">tag:vim-jp.org,2016/00/05:/2016/03/05/sample.html,rev:1</guid>
       <pubDate>Sat, 05 Mar 2016 00:00:00 +0900</pubDate>
       <author>vim-jp</author>
-      <description>&#xA;You&#39;ll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!&#xA;To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&#xA;&#xA;Jekyll also offers powerful support for code snippets:&#xA;&#xA;    package main&#xA;    &#xA;    import &#34;fmt&#34;&#xA;    &#xA;    func main() {&#xA;&#x9;    fmt.Println(&#34;こんにちわ世界&#34;)&#xA;    }&#xA;&#xA;Check out the [Jedie][jedie-gh] for more info.&#xA;&#xA;[jedie-gh]: https://github.com/mattn/jedie&#xA;</description>
+      <description>&#xA;mattnさんのサイト([Big Sky :: GitHub Pages が Jekyll 3.0 になり、ますますブログが書きやすくなった。][mattn_jejekyll])を参考に作業開始...&#xA;[mattn_jejekyll]: http://mattn.kaoriya.net/software/20160215110235.htm&#xA;&#xA;# 下準備&#xA;&#xA;## jadieの初期化処理&#xA;&#xA;&#x9;jadie new .&#xA;&#xA;_config.ymlに追記&#xA;&#xA;```&#xA;gems:&#xA;    - jemoji&#xA;    - jekyll-mentions&#xA;    - jekyll-redirect-from&#xA;    - jekyll-sitemap&#xA;    - jekyll-feed&#xA;```&#xA;&#xA;## code syntax highlight&#xA;cssを作成&#xA;css/code_syntax_highlight_base.css&#xA;css/code_syntax_highlight.css&#xA;_layout/default.htmlにそのcssをロードする処理を追加&#xA;&#xA;参考となるcssのサンプルサイト&#xA;&#xA;* [GitHub - jwarby/jekyll-pygments-themes: CSS themes for Pygments syntax highlighter, ready to drop into Jekyll. Also includes a custom theme builder!][site_A]&#xA;[site_A]: https://github.com/jwarby/jekyll-pygments-themes&#xA;* [Pygments Syntax Highlighter CSS Theme Files][site_B]&#xA;[site_B]: http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html&#xA;&#xA;今は__ZENBURN__を使っている&#xA;&#xA;なお、&#xA;```&#xA;.highlight code, .highlight pre {&#xA;&#x9;color:#fdce93;&#xA;&#x9;background-color:#3f3f3f;&#xA;}&#xA;```&#xA;&#xA;に.highlightを追加しないとテキストの背景にしか変化しない&#xA;&#xA;```&#xA;.highlight, .highlight code, .highlight pre {&#xA;&#x9;color:#fdce93;&#xA;&#x9;background-color:#3f3f3f;&#xA;}&#xA;```&#xA;&#xA;また、共通のcssとして、&#xA;```&#xA;.highlight { &#xA;&#x9;/*background-color: #efefef;*/&#xA;&#x9;padding: 7px 7px 7px 10px;&#xA;&#x9;border: 1px solid #ddd;&#xA;&#x9;-moz-box-shadow: 3px 3px rgba(0,0,0,0.1);&#xA;&#x9;-webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);&#xA;&#x9;box-shadow: 3px 3px rgba(0,0,0,0.1);&#xA;&#x9;margin: 20px 0 20px 0;&#xA;&#x9;overflow: hidden;&#xA;}&#xA;&#xA;code {&#xA;&#x9;font-family:&#39;Bitstream Vera Sans Mono&#39;,&#39;Courier&#39;, monospace;&#xA;}&#xA;```&#xA;を用いた。(mattnさんサイトから拝借)&#xA;&#xA;----&#xA;&#xA;# 記事を書くには?&#xA;&#xA;_posts/に記事ファイルが存在するので、自由に編集可能&#xA;&#xA;記事の編集を終えたら、&#xA;```&#xA;&#x9;jedie build&#xA;&#x9;git add *&#xA;&#x9;git commit -m &#34;commit message&#34;&#xA;&#x9;git push&#xA;```&#xA;&#xA;&#x9;jedie build&#xA;&#xA;で_site/にhtmlができる。&#xA;&#xA;ローカルで確認したい場合は&#xA;&#xA;&#x9;jedie serve&#xA;&#xA;新規に記事を書く場合には&#xA;yyyy-mm-dd-title.md&#xA;を自分で作成する&#xA;&#xA;また、jedie build と jedie serve で生成されるhtmlは多少異なるようなので、&#xA;code周りの要素を修正するために、ホストがlocalhostの場合に動作するJavaScriptを_layouts/default.html&#xA;に追加するとローカルでの作業がはかどるぞぃ。&#xA;</description>
     </item>
     
   </channel> 
